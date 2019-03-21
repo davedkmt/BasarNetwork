@@ -1,0 +1,20 @@
+<div id="main">
+  <div>
+
+    <!-- Boxes -->
+    <div class="thumbnails">
+
+      <div class="box" *ngFor="let user of users.items">
+        <a href="https://youtu.be/{{ user.snippet.resourceId.videoId }}" target="_blank" class="image fit"><img [src]="user.snippet.thumbnails.standard.url" alt="" /></a>
+        <!--<iframe width="560" height="355" src="https://www.youtube.com/embed/_r_P4_ooE-A" frameborder="5" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        <div class="inner">
+          <h5>{{ user.snippet.title }}</h5>
+          <br />
+          <a href="https://youtu.be/{{ user.snippet.resourceId.videoId }}" target="_blank" class="button fit" data-poptrox="youtube,800x400">Watch</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
